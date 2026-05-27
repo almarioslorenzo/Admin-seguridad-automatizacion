@@ -1,6 +1,6 @@
 A continuación se detallan los bloques de comandos aplicados secuencialmente en las consolas de cada RouterOS.
 
-### 1️⃣ MikroTik-1 (VRRP Master)
+### 1️ MikroTik-1 (VRRP Master)
 
 ```nodescript
 # ==========================================
@@ -75,7 +75,7 @@ set [find name=vrrp_gest] remote-address=10.10.30.3
 /ip dhcp-client add interface=ether1 disabled=no
 /ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade
 ```
-### 1️⃣ MikroTik-3 (VRRP Backup)
+### 1️ MikroTik-3 (VRRP Backup)
 ```
 ****# ==========================================
 # PARTE 1: ARQUITECTURA DE VLANs (Bridge VLAN Filtering)
@@ -141,10 +141,10 @@ set [find name=vrrp_gest] remote-address=10.10.30.2
 /ip dhcp-client add interface=ether1 disabled=no
 /ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade
 ```
-# ==========================================
-# Políticas de Firewall (Aplicar por igual en AMBOS Routers)
+
+### Políticas de Firewall (Aplicar por igual en AMBOS Routers)
 Fragmento de código
-# ==========================================
+
 ```
 # ==========================================
 # PARTE 5: POLÍTICAS DE FIREWALL STRICT INTER-VLAN
